@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Product Card</title>
+    <style>
+        .product-card {
+            font-family: 'Arial', sans-serif;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px;
+            background: white;
+            position: relative;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-price-section {
+            margin-bottom: 12px;
+        }
+        
+        .current-price {
+            display: inline;
+            color: #00ff00;
+        }
+        
+        .original-price {
+            font-size: 1rem;
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 8px;
+        }
+        
+        .product-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .product-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            color: #00ff00;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .trial-badge {
+            display: inline-block;
+            background-color: #20A0FF;
+            color: #1976D2;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+        
+        .discount-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff0000;
+            color: #000000;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #00ff00;
+            color: white;
+            border: none;
+            flex: 1;
+        }
+        
+        .btn-primary:hover {
+            background-color: #00ff00;
+            transform: translateY(-1px);
+        }
+        
+        .btn-link {
+            border: 1px solid #00ff00;
+            background: white;
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn-link a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        
+        .btn-link:hover {
+            background-color: #f1f8f1;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <!-- Discount Tag -->
+        <div class="discount-tag">-25%</div>
+        
+        <img src="https://via.placeholder.com/300x200" class="product-image">
+        
+        <div class="product-content">
+            <!-- Price section moved to top -->
+            <div class="product-price-section">
+                <h1 class="current-price">$89.99</h1>
+                <span class="original-price">$119.99</span>
+                <div class="trial-badge">14-day free trial</div>
+            </div>
+            
+            <div class="product-header">
+                <!-- SVG Icon -->
+                <svg class="product-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
+                </svg>
+                <h3 class="product-title">Premium Widget</h3>
+            </div>
+            
+            <p class="product-description">
+                Our premium widget features advanced technology for maximum efficiency. 
+                Perfect for both professional and personal use with a 2-year warranty.
+            </p>
+            
+            <div class="product-actions">
+                <button class="btn btn-primary">Add to Cart</button>
+                <button class="btn btn-link">
+                    <a href="#">Learn More</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
